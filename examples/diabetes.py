@@ -8,7 +8,6 @@ import matplotlib.pyplot as plt
 import numpy as np
 
 import sys
-
 sys.path.append('../lassonet')
 
 from lassonet import LassoNetRegressor, plot_path

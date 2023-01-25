@@ -14,6 +14,9 @@ from sklearn.preprocessing import StandardScaler, LabelEncoder
 from sklearn.model_selection import train_test_split
 import matplotlib.pyplot as plt
 
+import sys
+sys.path.append('../lassonet')
+
 from lassonet import LassoNetClassifier, plot_path
 from lassonet.interfaces import LassoNetClassifierCV
 from lassonet import plot_cv
