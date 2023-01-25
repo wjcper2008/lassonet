@@ -7,6 +7,10 @@ from sklearn.model_selection import train_test_split
 import matplotlib.pyplot as plt
 import numpy as np
 
+import sys
+
+sys.path.append('../lassonet')
+
 from lassonet import LassoNetRegressor, plot_path
 
 

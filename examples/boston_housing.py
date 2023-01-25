@@ -1,17 +1,29 @@
 #!/usr/bin/env python
 
-from sklearn.datasets import load_boston
 from sklearn.preprocessing import StandardScaler
 from sklearn.preprocessing import scale
 from sklearn.model_selection import train_test_split
 from sklearn.metrics import mean_squared_error
 import matplotlib.pyplot as plt
 import numpy as np
+import pandas as pd
+import sys
+
+sys.path.append('../lassonet')
 
 from lassonet import LassoNetRegressor
 
 
-dataset = load_boston()
+# dataset = load_boston()
+# data_url = "http://lib.stat.cmu.edu/datasets/boston"
+# raw_df = pd.read_csv(data_url, sep="\s+", skiprows=22, header=None)
+# print(raw_df)
+# X = np.hstack([raw_df.values[::2, :], raw_df.values[1::2, :2]])
+# y = raw_df.values[1::2, 2]
+
+from sklearn.datasets import fetch_california_housing
+dataset=fetch_california_housing()
+
 X = dataset.data
 y = dataset.target
 _, true_features = X.shape
